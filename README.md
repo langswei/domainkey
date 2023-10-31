@@ -1,26 +1,8 @@
-# Your Project's Title...
-Your project's description...
+# Generate Domain Key
+Adobe employees can use this app to generate domain keys for themselves or customers.
+A domain key is required to query for RUM data.
 
-## Environments
-- Preview: https://main--{repo}--{owner}.hlx.page/
-- Live: https://main--{repo}--{owner}.hlx.live/
-
-## Installation
-
-```sh
-npm i
-```
-
-## Linting
-
-```sh
-npm run lint
-```
-
-## Local development
-
-1. Create a new repository based on the `aem-boilerplate` template and add a mountpoint in the `fstab.yaml`
-1. Add the [AEM Code Sync GitHub App](https://github.com/apps/aem-code-sync) to the repository
-1. Install the [AEM CLI](https://github.com/adobe/aem-cli): `npm install -g @adobe/aem-cli`
-1. Start AEM Proxy: `aem up` (opens your browser at `http://localhost:3000`)
-1. Open the `{repo}` directory in your favorite IDE and start coding :)
+This app uses [Microsoft IDP authentication](https://www.aem.live/docs/authentication-setup-site) to verify
+authorization in lieu of the requestor already holding a privileged domain key.
+Currently this app must be hosted at https://generate--domainkey--langswei.hlx.live/ to function.
+This restriction relates to the integration with franklin-domainkey-provider and may change in the future.
