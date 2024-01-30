@@ -5,6 +5,9 @@
  * @param {Element} block The footer block element
  */
 export default async function decorate(block) {
+  // this app is obsolete, redirect to new location
+  document.location = 'https://aemcs-workspace.adobe.com/rum/generate-domain-key';
+
   // const cfg = readBlockConfig(block);
   block.innerHTML = '';
 
